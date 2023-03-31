@@ -15,8 +15,6 @@ public class RemoveDuplicatesArray {
 				temp[j] = a[i];
 				j++;
 			}
-			//
-
 		}
 		temp[j] = a[a.length - 1];
 		System.out.println(Arrays.toString(temp));
