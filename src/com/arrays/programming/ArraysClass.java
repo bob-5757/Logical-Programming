@@ -19,6 +19,7 @@ public class ArraysClass {
 			System.out.println(ll.get(i));
 		}
 
+		System.out.println(Arrays.asList(1,2,3,4,5));
 	}
 
 }
