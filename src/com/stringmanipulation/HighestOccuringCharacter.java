@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class FrequencyOfCharacterString {
+public class HighestOccuringCharacter {
 
 	public static void main(String[] args) {
 
-		String str = "aabbcc";
+		String str = "aabbacc dd ee zzzz znn ff";
 		str = str.replaceAll(" ", "");
 		char thatchar = 0;
 		int charCount = 0;
@@ -24,10 +24,15 @@ public class FrequencyOfCharacterString {
 			}
 
 		}
-		for (Map.Entry<Character, Integer> entry : hm.entrySet()) {
-			System.out.println(entry.getKey() + " " + entry.getValue());
+
+		for (Map.Entry<Character, Integer> entry : hm.entrySet()) {// a 5 b 6
+			if (entry.getValue() > charCount) {
+				thatchar = entry.getKey();
+				charCount = entry.getValue();
+			}
 		}
 
+		System.out.println(thatchar + " -> is the highest repeating character and occured " + charCount + " times");
 	}
 
 }
